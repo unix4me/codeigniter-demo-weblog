@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Change Log &mdash; CodeIgniter 3.0.5 documentation</title>
+  <title>Change Log &mdash; CodeIgniter 3.0.6 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.5 documentation" href="index.html"/>
+    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="index.html"/>
         <link rel="next" title="The MIT License (MIT)" href="license.html"/>
         <link rel="prev" title="Developer’s Certificate of Origin 1.1" href="DCO.html"/> 
 
@@ -422,6 +422,27 @@
             
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-3-0-6">
+<h2>Version 3.0.6<a class="headerlink" href="#version-3-0-6" title="Permalink to this headline">¶</a></h2>
+<p>Release Date: March 21, 2016</p>
+<ul class="simple">
+<li>General Changes<ul>
+<li>Added a destructor to <a class="reference internal" href="libraries/caching.html"><em>Cache Library</em></a> &#8216;memcached&#8217; driver to ensure that Memcache(d) connections are properly closed.</li>
+<li>Deprecated <a class="reference internal" href="libraries/form_validation.html"><em>Form Validation Library</em></a> method <tt class="docutils literal"><span class="pre">prep_for_form()</span></tt>.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="bug-fixes-for-3-0-6">
+<h3>Bug fixes for 3.0.6<a class="headerlink" href="#bug-fixes-for-3-0-6" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed a bug (#4516) - <a class="reference internal" href="libraries/form_validation.html"><em>Form Validation Library</em></a> always accepted empty array inputs.</li>
+<li>Fixed a bug where <a class="reference internal" href="libraries/sessions.html"><em>Session Library</em></a> allowed accessing <tt class="docutils literal"><span class="pre">$_SESSION</span></tt> values as class properties but <tt class="docutils literal"><span class="pre">isset()</span></tt> didn&#8217;t work on them.</li>
+<li>Fixed a bug where <a class="reference internal" href="libraries/form_validation.html"><em>Form Validation Library</em></a> modified the <tt class="docutils literal"><span class="pre">$_POST</span></tt> array when the data being validated was actually provided via <tt class="docutils literal"><span class="pre">set_data()</span></tt>.</li>
+<li>Fixed a bug (#4539) - <a class="reference internal" href="libraries/migration.html"><em>Migration Library</em></a> applied migrations before validating that all migrations within the requested version range are valid.</li>
+<li>Fixed a bug (#4539) - <a class="reference internal" href="libraries/migration.html"><em>Migration Library</em></a> triggered failures for migrations that are out of the requested version range.</li>
+</ul>
+</div>
+</div>
 <div class="section" id="version-3-0-5">
 <h2>Version 3.0.5<a class="headerlink" href="#version-3-0-5" title="Permalink to this headline">¶</a></h2>
 <p>Release Date: March 11, 2016</p>
@@ -466,7 +487,7 @@
 <li>Fixed a bug (#4475) - <a class="reference internal" href="libraries/security.html"><em>Security Library</em></a> method <tt class="docutils literal"><span class="pre">strip_image_tags()</span></tt> preserves only the first URL character from non-quoted <em>src</em> attributes.</li>
 <li>Fixed a bug where <a class="reference internal" href="general/profiling.html"><em>Profiler Library</em></a> didn&#8217;t apply <tt class="docutils literal"><span class="pre">htmlspecialchars()</span></tt> to all displayed inputs.</li>
 <li>Fixed a bug (#4277) - <a class="reference internal" href="libraries/caching.html"><em>Cache Library</em></a> triggered fatal errors if accessing the Memcache(d) and/or Redis driver and they are not available on the system.</li>
-<li>Fixed a bug where <a class="reference internal" href="libraries/caching.html"><em>Cache Library</em></a> method <tt class="docutils literal"><span class="pre">is_supported()</span></tt> logged an error message on when it returns <tt class="docutils literal"><span class="pre">FALSE</span></tt> for the APC and Wincache drivers.</li>
+<li>Fixed a bug where <a class="reference internal" href="libraries/caching.html"><em>Cache Library</em></a> method <tt class="docutils literal"><span class="pre">is_supported()</span></tt> logged an error message when it returns <tt class="docutils literal"><span class="pre">FALSE</span></tt> for the APC and Wincache drivers.</li>
 </ul>
 </div>
 </div>
@@ -3792,7 +3813,7 @@ and fixed various typos.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Mar 11, 2016.
+      Last updated on Mar 21, 2016.
     </p>
   </div>
 
@@ -3813,7 +3834,7 @@ and fixed various typos.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.0.5',
+            VERSION:'3.0.6',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
