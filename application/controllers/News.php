@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class News extends MY_Controller {
 
@@ -7,8 +9,8 @@ class News extends MY_Controller {
     public function __construct()
     {
         parent::__construct();
-        $this->load->helper(array('url','form'));       
-        $this->load->library(array('form_validation','pagination'));
+        $this->load->helper(array('url', 'form'));
+        $this->load->library(array('form_validation', 'pagination'));
         $this->load->model('news_model');
         $this->load->database();
     }
@@ -107,7 +109,8 @@ class News extends MY_Controller {
         $this->data['pagebody'] = 'news/success';
         $this->render();
     }
-    
+
+    // ------------------------------------------------------------------------------
 }
 
 /* End of file News.php */
