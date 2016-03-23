@@ -3,9 +3,9 @@ CodeIgniter Demo Weblog
 #######################
 
 
-Demo Weblog is an example of a simple weblog system based on the `Codeigniter website <https://github.com/bcit-ci/codeigniter-website>`_.
+Demo Weblog is an example of a simple weblog system based on the `CodeIgniter website <https://github.com/bcit-ci/codeigniter-website>`_.
 
-I've used the `Codeigniter website <https://github.com/bcit-ci/codeigniter-website>`_  as an example for my demo weblog.
+I've used the `CodeIgniter website <https://github.com/bcit-ci/codeigniter-website>`_  as an example for my demo weblog.
 I stripped it down to a bare minimum, leaving the fine parser examples and then build it up again with examples from the 
 study guide.
 
