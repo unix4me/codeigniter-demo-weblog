@@ -11,11 +11,7 @@
         <meta name="robots" content="index, follow">
         
         <link rel="icon" href="../../favicon.ico">
-        
-        <title><?php echo $title; ?></title>
-        
-        <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo base_url(); ?>assets/css/style.css" rel="stylesheet">
+        {header_view}
     </head>
     <body>
         <div class="blog-masthead-background">
@@ -64,7 +60,6 @@
             <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
             <p><a href="#">Back to top</a></p>
         </footer>
-        <script src="<?php echo base_url(); ?>assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-        <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+        {footer_view}
     </body>
 </html>

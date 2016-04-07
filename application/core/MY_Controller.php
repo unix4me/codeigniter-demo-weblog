@@ -83,9 +83,11 @@ class MY_Controller extends CI_Controller {
         {
             $menuitem['active'] = (ltrim($menuitem['link'], '/ ') == uri_string()) ? 'active' : '';
         }
+        $this->data['header_view'] = $this->parser->parse('theme/header_view', $this->data, true);
         $this->data['menubar'] = $this->parser->parse('theme/menubar', $choices, true);
-        $this->data['footerbar'] = $this->parser->parse('theme/menubar', $this->config->item('footer_choices'), true);
         $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
+        $this->data['footerbar'] = $this->parser->parse('theme/menubar', $this->config->item('footer_choices'), true);
+        $this->data['footer_view'] = $this->parser->parse('theme/footer_view', $this->data, true);
 
         $this->data['data'] = &$this->data;
 
