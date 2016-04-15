@@ -1,4 +1,6 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
+
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class News_model extends CI_Model {
 
@@ -54,12 +56,18 @@ class News_model extends CI_Model {
 
     public function set_news()
     {
+        $text2html = $this->markdown->parse($this->input->post('text'));
+        $excerpt2html = $this->markdown->parse($this->input->post('excerpt'));
+        $created = date("Y-m-d H:i:s");
         $slug = url_title($this->input->post('title'), 'dash', TRUE);
         $data = array(
-            'title'      => $this->input->post('title'),
-            'slug'       => $slug,
-            'excerpt'    => $this->input->post('excerpt'),
-            'text'       => $this->input->post('text'),
+            'title' => $this->input->post('title'),
+            'slug' => $slug,
+            'excerpt' => $this->input->post('excerpt'),
+            'excerpt2html' => $excerpt2html,
+            'text' => $this->input->post('text'),
+            'text2html' => $text2html,
+            'created' => $created
         );
         return $this->db->insert('news', $data);
     }
@@ -68,12 +76,18 @@ class News_model extends CI_Model {
 
     public function update_news()
     {
+        $text2html = $this->markdown->parse($this->input->post('text'));
+        $excerpt2html = $this->markdown->parse($this->input->post('excerpt'));
+        $updated = date("Y-m-d H:i:s");
         $slug = url_title($this->input->post('title'), 'dash', TRUE);
         $data = array(
-            'title'      => $this->input->post('title'),
-            'slug'       => $slug,
-            'excerpt'    => $this->input->post('excerpt'),
-            'text'       => $this->input->post('text'),
+            'title' => $this->input->post('title'),
+            'slug' => $slug,
+            'excerpt' => $this->input->post('excerpt'),
+            'excerpt2html' => $excerpt2html,
+            'text' => $this->input->post('text'),
+            'text2html' => $text2html,
+            'updated' => $updated
         );
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('news', $data);

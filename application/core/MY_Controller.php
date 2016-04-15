@@ -58,11 +58,11 @@ class MY_Controller extends CI_Controller {
     {
         parent::__construct();
 
-        $this->load->library(array('parser'));
+        $this->load->library(array('parser','markdown'));
         $this->data = array();
         $this->data['title'] = 'CodeIgniter Demo Weblog';
         $this->errors = array();
-
+        
         $this->data = array(
             'blog_title' => $this->config->item('blog_title'),
             'blog_description' => $this->config->item('blog_description')
