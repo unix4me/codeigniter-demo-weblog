@@ -19,6 +19,7 @@ Features
 * News tutorial with CRUD
 * Pagination
 * A simple contact form
+* Markdown parser
 * `Screenshot <https://github.com/unix4me/codeigniter-demo-weblog/blob/master/screenshot.png>`_
 
 
