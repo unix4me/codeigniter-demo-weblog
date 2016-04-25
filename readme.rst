@@ -19,7 +19,8 @@ Features
 * News tutorial with CRUD
 * Pagination
 * A simple contact form
-* Markdown parser
+* `Markdown parser <https://github.com/jonlabelle/ci-markdown/>`_
+* `Highlight.js <https://github.com/isagalaev/highlight.js/>`_
 * `Screenshot <https://github.com/unix4me/codeigniter-demo-weblog/blob/master/screenshot.png>`_
 
 
