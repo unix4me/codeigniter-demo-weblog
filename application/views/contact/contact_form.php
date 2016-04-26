@@ -50,7 +50,20 @@
         echo form_textarea($options);
         ?>
     </div>
+    <div class="col-md-12">
+        <div class="row">
+            <label class="col-md-12">Captcha</label>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-md-6">
+                <?php echo $captcha['image']; ?>
+                <br /><br />
+                <input type="text" class="form-control" name="newCaptcha" autocomplete="off"/>         
+            </div>
+        </div>
+    </div> 
     <div class="form-group col-md-12">
+        <br />
         <?php
         echo form_submit('submit', 'Submit', 'class="btn btn-primary"');
         echo form_close();
