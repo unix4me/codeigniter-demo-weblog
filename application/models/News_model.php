@@ -56,12 +56,14 @@ class News_model extends CI_Model {
 
     public function set_news()
     {
-        $text2html = $this->markdown->parse($this->input->post('text'));
-        $excerpt2html = $this->markdown->parse($this->input->post('excerpt'));
+        $title = html_purify($this->input->post('title'));
+        $text2html = html_purify($this->markdown->parse($this->input->post('text')));
+        $excerpt2html = html_purify($this->markdown->parse($this->input->post('excerpt')));
         $created = date("Y-m-d H:i:s");
+        $slug = html_purify($this->input->post('title'));        
         $slug = url_title($this->input->post('title'), 'dash', TRUE);
         $data = array(
-            'title' => $this->input->post('title'),
+            'title' => $title,
             'slug' => $slug,
             'excerpt' => $this->input->post('excerpt'),
             'excerpt2html' => $excerpt2html,
@@ -76,12 +78,13 @@ class News_model extends CI_Model {
 
     public function update_news()
     {
-        $text2html = $this->markdown->parse($this->input->post('text'));
-        $excerpt2html = $this->markdown->parse($this->input->post('excerpt'));
+        $title = html_purify($this->input->post('title'));
+        $text2html = html_purify($this->markdown->parse($this->input->post('text')));
+        $excerpt2html = html_purify($this->markdown->parse($this->input->post('excerpt')));
         $updated = date("Y-m-d H:i:s");
-        $slug = url_title($this->input->post('title'), 'dash', TRUE);
+        $slug = html_purify(url_title($this->input->post('title'), 'dash', TRUE));
         $data = array(
-            'title' => $this->input->post('title'),
+            'title' => $title,
             'slug' => $slug,
             'excerpt' => $this->input->post('excerpt'),
             'excerpt2html' => $excerpt2html,

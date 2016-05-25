@@ -21,6 +21,8 @@ Features
 * A simple contact form with Captcha
 * `Markdown parser <https://github.com/jonlabelle/ci-markdown/>`_
 * `Highlight.js <https://github.com/isagalaev/highlight.js/>`_
+* `HTML Purifier <http://htmlpurifier.org/>`_
+* `CodeIgniter HTML Purifier Helper <https://github.com/refringe/codeigniter-htmlpurifier/>`_
 * `Screenshot <https://github.com/unix4me/codeigniter-demo-weblog/blob/master/screenshot.png>`_
 
 
