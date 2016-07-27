@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Language Helper &mdash; CodeIgniter 3.0.6 documentation</title>
+  <title>Language Helper &mdash; CodeIgniter 3.1.0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
         <link rel="next" title="Number Helper" href="number_helper.html"/>
         <link rel="prev" title="Inflector Helper" href="inflector_helper.html"/> 
@@ -457,7 +457,7 @@ language files.</p>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">HTML-formatted language line label</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The language line; in an HTML label tag, if the <tt class="docutils literal"><span class="pre">$for</span></tt> parameter is not empty</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">string</p>
@@ -468,8 +468,11 @@ language files.</p>
 <p>This function returns a line of text from a loaded language file with
 simplified syntax that may be more desirable for view files than
 <tt class="docutils literal"><span class="pre">CI_Lang::line()</span></tt>.</p>
-<p>Example:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">lang</span><span class="p">(</span><span class="s1">&#39;language_key&#39;</span><span class="p">,</span> <span class="s1">&#39;form_item_id&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;myClass&#39;</span><span class="p">));</span>
+<p>Examples:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="k">echo</span> <span class="nx">lang</span><span class="p">(</span><span class="s1">&#39;language_key&#39;</span><span class="p">);</span>
+<span class="c1">// Outputs: Language line</span>
+
+<span class="k">echo</span> <span class="nx">lang</span><span class="p">(</span><span class="s1">&#39;language_key&#39;</span><span class="p">,</span> <span class="s1">&#39;form_item_id&#39;</span><span class="p">,</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;class&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;myClass&#39;</span><span class="p">));</span>
 <span class="c1">// Outputs: &lt;label for=&quot;form_item_id&quot; class=&quot;myClass&quot;&gt;Language line&lt;/label&gt;</span>
 </pre></div>
 </div>
@@ -497,7 +500,7 @@ simplified syntax that may be more desirable for view files than
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Mar 21, 2016.
+      Last updated on Jul 26, 2016.
     </p>
   </div>
 
@@ -518,7 +521,7 @@ simplified syntax that may be more desirable for view files than
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0.6',
+            VERSION:'3.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

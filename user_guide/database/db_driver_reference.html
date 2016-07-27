@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DB Driver Reference &mdash; CodeIgniter 3.0.6 documentation</title>
+  <title>DB Driver Reference &mdash; CodeIgniter 3.1.0 documentation</title>
   
 
   
@@ -30,9 +30,9 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.0.6 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
-        <link rel="next" title="Tutorial" href="../tutorial/index.html"/>
+        <link rel="next" title="Helpers" href="../helpers/index.html"/>
         <link rel="prev" title="Database Utility Class" href="utilities.html"/> 
 
   
@@ -659,6 +659,24 @@ upon successful execution of a &#8220;read&#8221; type query.</p>
 <p>A simplified version of the <tt class="docutils literal"><span class="pre">query()</span></tt> method, appropriate
 for use when you don&#8217;t need to get a result object or to
 just send a query to the database and not care for the result.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="CI_DB_driver::affected_rows">
+<tt class="descname">affected_rows</tt><big>(</big><big>)</big><a class="headerlink" href="#CI_DB_driver::affected_rows" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Number of rows affected</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+<p>Returns the number of rows <em>changed</em> by the last executed query.</p>
+<p>Useful for checking how much rows were created, updated or deleted
+during the last executed query.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1402,7 +1420,7 @@ position, and escape only the correct identifiers.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tutorial/index.html" class="btn btn-neutral float-right" title="Tutorial">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../helpers/index.html" class="btn btn-neutral float-right" title="Helpers">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="utilities.html" class="btn btn-neutral" title="Database Utility Class"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1415,7 +1433,7 @@ position, and escape only the correct identifiers.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Mar 21, 2016.
+      Last updated on Jul 26, 2016.
     </p>
   </div>
 
@@ -1436,7 +1454,7 @@ position, and escape only the correct identifiers.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.0.6',
+            VERSION:'3.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
