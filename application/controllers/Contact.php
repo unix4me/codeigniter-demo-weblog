@@ -18,8 +18,6 @@ class Contact extends MY_Controller {
 
     public function index()
     {
-        $newCaptcha = $this->input->post('newCaptcha');
-
         $this->form_validation->set_rules('name', 'Name', 'required|trim|max_length[128]');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|max_length[128]');
         $this->form_validation->set_rules('message', 'Message', 'required|trim|max_length[255]');
@@ -71,7 +69,7 @@ class Contact extends MY_Controller {
             return TRUE;
         }
         else
-        {
+        {            
             $this->form_validation->set_message('check_captcha', 'Wrong captcha!');
             return FALSE;
         }
