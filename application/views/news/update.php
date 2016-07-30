@@ -13,7 +13,8 @@
         'id' => 'title',
         'name' => 'title',
         'value' => set_value('title', $news_item['title'], FALSE),
-        'class' => 'form-control'
+        'class' => 'form-control',
+        'readonly' => TRUE
     );
     echo form_input($options);
     

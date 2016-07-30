@@ -35,7 +35,7 @@
                 <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
                     <div class="sidebar-module sidebar-module-inset">
                         <div class="text-center">
-                            <img src="/assets/images/ci-logo-big.png" alt="CodeIgniter">        
+                            <img src="/images/ci-logo-big.png" alt="CodeIgniter">        
                         </div>
                         <br />
                         <p>Demo Weblog is an example of a simple weblog system based on the <a href="https://github.com/bcit-ci/codeigniter-website">CodeIgniter Website</a>.</p>
