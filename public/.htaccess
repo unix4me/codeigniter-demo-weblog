@@ -2,6 +2,5 @@
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond $1 !^(index\.php?_url|captcha)
     RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
 </IfModule>
