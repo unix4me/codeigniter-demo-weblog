@@ -64,12 +64,13 @@ class Contact extends MY_Controller {
     public function check_captcha($str)
     {
         $word = $this->session->userdata('captchaWord');
+
         if ($str == $word)
         {
             return TRUE;
         }
         else
-        {            
+        {
             $this->form_validation->set_message('check_captcha', 'Wrong captcha!');
             return FALSE;
         }

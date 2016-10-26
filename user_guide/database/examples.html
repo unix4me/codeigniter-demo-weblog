@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Database Quick Start: Example Code &mdash; CodeIgniter 3.1.0 documentation</title>
+  <title>Database Quick Start: Example Code &mdash; CodeIgniter 3.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Database Configuration" href="configuration.html"/>
         <link rel="prev" title="Database Reference" href="index.html"/> 
@@ -432,7 +432,7 @@ describing each function.</p>
 <h2>Initializing the Database Class<a class="headerlink" href="#initializing-the-database-class" title="Permalink to this headline">¶</a></h2>
 <p>The following code loads and initializes the database class based on
 your <a class="reference internal" href="configuration.html"><em>configuration</em></a> settings:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">database</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Once loaded the class is ready to be used as described below.</p>
@@ -441,7 +441,7 @@ automatically. See the <a class="reference internal" href="connecting.html"><em>
 </div>
 <div class="section" id="standard-query-with-multiple-results-object-version">
 <h2>Standard Query With Multiple Results (Object Version)<a class="headerlink" href="#standard-query-with-multiple-results-object-version" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name, title, email FROM my_table&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name, title, email FROM my_table&#39;</span><span class="p">);</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span>
 <span class="p">{</span>
@@ -458,7 +458,7 @@ $row-&gt;title</p>
 </div>
 <div class="section" id="standard-query-with-multiple-results-array-version">
 <h2>Standard Query With Multiple Results (Array Version)<a class="headerlink" href="#standard-query-with-multiple-results-array-version" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name, title, email FROM my_table&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name, title, email FROM my_table&#39;</span><span class="p">);</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result_array</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span>
 <span class="p">{</span>
@@ -473,7 +473,7 @@ indexes. Example: $row[&#8216;title&#8217;]</p>
 </div>
 <div class="section" id="standard-query-with-single-result">
 <h2>Standard Query With Single Result<a class="headerlink" href="#standard-query-with-single-result" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name FROM my_table LIMIT 1&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name FROM my_table LIMIT 1&#39;</span><span class="p">);</span>
 <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">row</span><span class="p">();</span>
 <span class="k">echo</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">;</span>
 </pre></div>
@@ -482,7 +482,7 @@ indexes. Example: $row[&#8216;title&#8217;]</p>
 </div>
 <div class="section" id="standard-query-with-single-result-array-version">
 <h2>Standard Query With Single Result (Array version)<a class="headerlink" href="#standard-query-with-single-result-array-version" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name FROM my_table LIMIT 1&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">&#39;SELECT name FROM my_table LIMIT 1&#39;</span><span class="p">);</span>
 <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">row_array</span><span class="p">();</span>
 <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
 </pre></div>
@@ -492,7 +492,7 @@ $row[&#8216;name&#8217;]</p>
 </div>
 <div class="section" id="standard-insert">
 <h2>Standard Insert<a class="headerlink" href="#standard-insert" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO mytable (title, name) VALUES (&quot;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;)&quot;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;INSERT INTO mytable (title, name) VALUES (&quot;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">escape</span><span class="p">(</span><span class="nv">$name</span><span class="p">)</span><span class="o">.</span><span class="s2">&quot;)&quot;</span><span class="p">;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
 <span class="k">echo</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">affected_rows</span><span class="p">();</span>
 </pre></div>
@@ -502,7 +502,7 @@ $row[&#8216;name&#8217;]</p>
 <h2>Query Builder Query<a class="headerlink" href="#query-builder-query" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="query_builder.html"><em>Query Builder Pattern</em></a> gives you a simplified
 means of retrieving data:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;table_name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$query</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;table_name&#39;</span><span class="p">);</span>
 
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$query</span><span class="o">-&gt;</span><span class="na">result</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$row</span><span class="p">)</span>
 <span class="p">{</span>
@@ -516,7 +516,7 @@ compliment of functions for working with data.</p>
 </div>
 <div class="section" id="query-builder-insert">
 <h2>Query Builder Insert<a class="headerlink" href="#query-builder-insert" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;title&#39;</span> <span class="o">=&gt;</span> <span class="nv">$title</span><span class="p">,</span>
         <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span>
         <span class="s1">&#39;date&#39;</span> <span class="o">=&gt;</span> <span class="nv">$date</span>
@@ -547,7 +547,7 @@ compliment of functions for working with data.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jul 26, 2016.
+      Last updated on Oct 24, 2016.
     </p>
   </div>
 
@@ -568,7 +568,7 @@ compliment of functions for working with data.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

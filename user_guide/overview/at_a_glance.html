@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CodeIgniter at a Glance &mdash; CodeIgniter 3.1.0 documentation</title>
+  <title>CodeIgniter at a Glance &mdash; CodeIgniter 3.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="../index.html"/>
         <link rel="up" title="CodeIgniter Overview" href="index.html"/>
         <link rel="next" title="CodeIgniter Features" href="features.html"/>
         <link rel="prev" title="Getting Started With CodeIgniter" href="getting_started.html"/> 
@@ -468,7 +468,7 @@ detail on its own page.</p>
 Rather than using the standard &#8220;query string&#8221; approach to URLs that is
 synonymous with dynamic systems, CodeIgniter uses a segment-based
 approach:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">article</span><span class="o">/</span><span class="mi">345</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">news</span><span class="o">/</span><span class="nx">article</span><span class="o">/</span><span class="mi">345</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -496,15 +496,15 @@ be optionally used, it does not force you to use one. Template engines
 simply can not match the performance of native PHP, and the syntax that
 must be learned to use a template engine is usually only marginally
 easier than learning the basics of PHP. Consider this block of PHP code:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
-<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$addressbook</span> <span class="k">as</span> <span class="nv">$name</span><span class="p">)</span><span class="o">:?&gt;</span>
-        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;?=</span><span class="nv">$name</span><span class="cp">?&gt;</span><span class="nt">&lt;/li&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+<span class="o">&lt;?</span><span class="nx">php</span> <span class="k">foreach</span> <span class="p">(</span><span class="nv">$addressbook</span> <span class="k">as</span> <span class="nv">$name</span><span class="p">)</span><span class="o">:</span><span class="cp">?&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span><span class="cp">&lt;?</span><span class="o">=</span><span class="nv">$name</span><span class="cp">?&gt;</span><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="cp">&lt;?php</span> <span class="k">endforeach</span><span class="p">;</span> <span class="cp">?&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>Contrast this with the pseudo-code used by a template engine:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
 <span class="p">{</span><span class="k">foreach</span> <span class="nx">from</span><span class="o">=</span><span class="nv">$addressbook</span> <span class="nx">item</span><span class="o">=</span><span class="s2">&quot;name&quot;</span><span class="p">}</span>
         <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{</span><span class="nv">$name</span><span class="p">}</span><span class="o">&lt;/</span><span class="nx">li</span><span class="o">&gt;</span>
 <span class="p">{</span><span class="o">/</span><span class="k">foreach</span><span class="p">}</span>
@@ -549,7 +549,7 @@ clean and well commented as well.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jul 26, 2016.
+      Last updated on Oct 24, 2016.
     </p>
   </div>
 
@@ -570,7 +570,7 @@ clean and well commented as well.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

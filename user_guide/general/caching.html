@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Web Page Caching &mdash; CodeIgniter 3.1.0 documentation</title>
+  <title>Web Page Caching &mdash; CodeIgniter 3.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="../index.html"/>
         <link rel="up" title="General Topics" href="index.html"/>
         <link rel="next" title="Profiling Your Application" href="profiling.html"/>
         <link rel="prev" title="Error Handling" href="errors.html"/> 
@@ -447,10 +447,10 @@ browser.</p>
 <h2>Enabling Caching<a class="headerlink" href="#enabling-caching" title="Permalink to this headline">¶</a></h2>
 <p>To enable caching, put the following tag in any of your controller
 methods:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">cache</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">cache</span><span class="p">(</span><span class="nv">$n</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Where <tt class="docutils literal"><span class="pre">$n</span></tt> is the number of <strong>minutes</strong> you wish the page to remain
+<p>Where <code class="docutils literal"><span class="pre">$n</span></code> is the number of <strong>minutes</strong> you wish the page to remain
 cached between refreshes.</p>
 <p>The above tag can go anywhere within a method. It is not affected by
 the order that it appears, so place it wherever it seems most logical to
@@ -482,9 +482,9 @@ it will no longer be refreshed when it expires.</p>
 <p class="last">Removing the tag will not delete the cache immediately. It will
 have to expire normally.</p>
 </div>
-<p>If you need to manually delete the cache, you can use the <tt class="docutils literal"><span class="pre">delete_cache()</span></tt>
+<p>If you need to manually delete the cache, you can use the <code class="docutils literal"><span class="pre">delete_cache()</span></code>
 method:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// Deletes cache for the currently requested URI</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// Deletes cache for the currently requested URI</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">output</span><span class="o">-&gt;</span><span class="na">delete_cache</span><span class="p">();</span>
 
 <span class="c1">// Deletes cache for /foo/bar</span>
@@ -513,7 +513,7 @@ method:</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jul 26, 2016.
+      Last updated on Oct 24, 2016.
     </p>
   </div>
 
@@ -534,7 +534,7 @@ method:</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

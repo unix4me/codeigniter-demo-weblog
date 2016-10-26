@@ -1,11 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php foreach ($news as $news_item): ?>
     <div class="blog-post">
-        <h2 class="blog-post-title"><?php echo anchor('news/' . $news_item['slug'], $news_item['title']); ?></h2>
+        <h2 class="blog-post-title"><?php echo anchor('news/' . html_purify($news_item['slug']), html_purify($news_item['title'])); ?></h2>
         <p class="blog-post-meta">
-        <?php echo strftime('Published on %B %d, %Y', strtotime($news_item['created'])); ?> by <a href="#">User</a>
+        <?php echo strftime('Published on %B %d, %Y', strtotime(html_purify($news_item['created']))); ?> by <a href="#">User</a>
         </p>
-        <?php echo $news_item['excerpt2html']; ?><br />
+        <?php echo html_purify($news_item['excerpt2html']); ?><br />
         <?php echo anchor('news/create/', 'Create'); ?>
         <?php echo anchor('news/' . $news_item['slug'], 'Read'); ?>
         <?php echo anchor('news/update/' . $news_item['slug'], ' Update'); ?>            

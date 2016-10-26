@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Email Class &mdash; CodeIgniter 3.1.0 documentation</title>
+  <title>Email Class &mdash; CodeIgniter 3.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="../index.html"/>
         <link rel="up" title="Libraries" href="index.html"/>
         <link rel="next" title="Encrypt Class" href="encrypt.html"/>
         <link rel="prev" title="Config Class" href="config.html"/> 
@@ -463,7 +463,7 @@ set your preferences in a config file.</p>
 <p>Here is a basic example demonstrating how you might send email. Note:
 This example assumes you are sending the email from one of your
 <a class="reference internal" href="../general/controllers.html"><em>controllers</em></a>.</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">library</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">);</span>
 
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;your@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="s1">&#39;someone@example.com&#39;</span><span class="p">);</span>
@@ -486,7 +486,7 @@ below:</p>
 <p>Preferences are set by passing an array of preference values to the
 email initialize method. Here is an example of how you might set some
 preferences:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sendmail&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;protocol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;sendmail&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;mailpath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/usr/sbin/sendmail&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;charset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;iso-8859-1&#39;</span><span class="p">;</span>
 <span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;wordwrap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
@@ -505,7 +505,7 @@ if you do not set them.</p>
 instead put them into a config file. Simply create a new file called the
 email.php, add the $config array in that file. Then save the file at
 config/email.php and it will be used automatically. You will NOT need to
-use the <tt class="docutils literal"><span class="pre">$this-&gt;email-&gt;initialize()</span></tt> method if you save your
+use the <code class="docutils literal"><span class="pre">$this-&gt;email-&gt;initialize()</span></code> method if you save your
 preferences in a config file.</p>
 </div>
 </div>
@@ -596,7 +596,7 @@ page. Make sure you don&#8217;t have any relative links or relative image
 paths otherwise they will not work.</td>
 </tr>
 <tr class="row-odd"><td><strong>charset</strong></td>
-<td><tt class="docutils literal"><span class="pre">$config['charset']</span></tt></td>
+<td><code class="docutils literal"><span class="pre">$config['charset']</span></code></td>
 <td>&nbsp;</td>
 <td>Character set (utf-8, iso-8859-1, etc.).</td>
 </tr>
@@ -645,7 +645,7 @@ and you have a very long link in your email it can get wrapped too,
 causing it to become un-clickable by the person receiving it.
 CodeIgniter lets you manually override word wrapping within part of your
 message like this:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nx">The</span> <span class="nx">text</span> <span class="nx">of</span> <span class="nx">your</span> <span class="nx">email</span> <span class="nx">that</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nx">The</span> <span class="nx">text</span> <span class="nx">of</span> <span class="nx">your</span> <span class="nx">email</span> <span class="nx">that</span>
 <span class="nx">gets</span> <span class="nx">wrapped</span> <span class="nx">normally</span><span class="o">.</span>
 
 <span class="p">{</span><span class="nx">unwrap</span><span class="p">}</span><span class="nx">http</span><span class="o">://</span><span class="nx">example</span><span class="o">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">a_long_link_that_should_not_be_wrapped</span><span class="o">.</span><span class="nx">html</span><span class="p">{</span><span class="o">/</span><span class="nx">unwrap</span><span class="p">}</span>
@@ -661,10 +661,10 @@ message like this:</p>
 <h2><a class="toc-backref" href="#id7">Class Reference</a><a class="headerlink" href="#class-reference" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="CI_Email">
-<em class="property">class </em><tt class="descname">CI_Email</tt><a class="headerlink" href="#CI_Email" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">CI_Email</code><a class="headerlink" href="#CI_Email" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
 <dt id="CI_Email::from">
-<tt class="descname">from</tt><big>(</big><em>$from</em><span class="optional">[</span>, <em>$name = ''</em><span class="optional">[</span>, <em>$return_path = NULL</em><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::from" title="Permalink to this definition">¶</a></dt>
+<code class="descname">from</code><span class="sig-paren">(</span><em>$from</em><span class="optional">[</span>, <em>$name = ''</em><span class="optional">[</span>, <em>$return_path = NULL</em><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::from" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -685,11 +685,11 @@ message like this:</p>
 </tbody>
 </table>
 <p>Sets the email address and name of the person sending the email:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;you@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;you@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can also set a Return-Path, to help redirect undelivered mail:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;you@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">,</span> <span class="s1">&#39;returned_emails@example.com&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">from</span><span class="p">(</span><span class="s1">&#39;you@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">,</span> <span class="s1">&#39;returned_emails@example.com&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -701,7 +701,7 @@ your protocol.</p>
 
 <dl class="method">
 <dt id="CI_Email::reply_to">
-<tt class="descname">reply_to</tt><big>(</big><em>$replyto</em><span class="optional">[</span>, <em>$name = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::reply_to" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reply_to</code><span class="sig-paren">(</span><em>$replyto</em><span class="optional">[</span>, <em>$name = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::reply_to" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -722,14 +722,14 @@ your protocol.</p>
 </table>
 <p>Sets the reply-to address. If the information is not provided the
 information in the :meth:from method is used. Example:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">reply_to</span><span class="p">(</span><span class="s1">&#39;you@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">reply_to</span><span class="p">(</span><span class="s1">&#39;you@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;Your Name&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::to">
-<tt class="descname">to</tt><big>(</big><em>$to</em><big>)</big><a class="headerlink" href="#CI_Email::to" title="Permalink to this definition">¶</a></dt>
+<code class="descname">to</code><span class="sig-paren">(</span><em>$to</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::to" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -749,13 +749,13 @@ information in the :meth:from method is used. Example:</p>
 </table>
 <p>Sets the email address(s) of the recipient(s). Can be a single e-mail,
 a comma-delimited list or an array:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="s1">&#39;someone@example.com&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="s1">&#39;someone@example.com&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="s1">&#39;one@example.com, two@example.com, three@example.com&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span><span class="s1">&#39;one@example.com, two@example.com, three@example.com&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">to</span><span class="p">(</span>
         <span class="k">array</span><span class="p">(</span><span class="s1">&#39;one@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;two@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;three@example.com&#39;</span><span class="p">)</span>
 <span class="p">);</span>
 </pre></div>
@@ -764,7 +764,7 @@ a comma-delimited list or an array:</p>
 
 <dl class="method">
 <dt id="CI_Email::cc">
-<tt class="descname">cc</tt><big>(</big><em>$cc</em><big>)</big><a class="headerlink" href="#CI_Email::cc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cc</code><span class="sig-paren">(</span><em>$cc</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::cc" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -788,7 +788,7 @@ a comma-delimited list or an array.</p>
 
 <dl class="method">
 <dt id="CI_Email::bcc">
-<tt class="descname">bcc</tt><big>(</big><em>$bcc</em><span class="optional">[</span>, <em>$limit = ''</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::bcc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">bcc</code><span class="sig-paren">(</span><em>$bcc</em><span class="optional">[</span>, <em>$limit = ''</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::bcc" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -807,16 +807,16 @@ a comma-delimited list or an array.</p>
 </tr>
 </tbody>
 </table>
-<p>Sets the BCC email address(s). Just like the <tt class="docutils literal"><span class="pre">to()</span></tt> method, can be a single
+<p>Sets the BCC email address(s). Just like the <code class="docutils literal"><span class="pre">to()</span></code> method, can be a single
 e-mail, a comma-delimited list or an array.</p>
-<p>If <tt class="docutils literal"><span class="pre">$limit</span></tt> is set, &#8220;batch mode&#8221; will be enabled, which will send
+<p>If <code class="docutils literal"><span class="pre">$limit</span></code> is set, &#8220;batch mode&#8221; will be enabled, which will send
 the emails to batches, with each batch not exceeding the specified
-<tt class="docutils literal"><span class="pre">$limit</span></tt>.</p>
+<code class="docutils literal"><span class="pre">$limit</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::subject">
-<tt class="descname">subject</tt><big>(</big><em>$subject</em><big>)</big><a class="headerlink" href="#CI_Email::subject" title="Permalink to this definition">¶</a></dt>
+<code class="descname">subject</code><span class="sig-paren">(</span><em>$subject</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::subject" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -835,14 +835,14 @@ the emails to batches, with each batch not exceeding the specified
 </tbody>
 </table>
 <p>Sets the email subject:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">subject</span><span class="p">(</span><span class="s1">&#39;This is my subject&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">subject</span><span class="p">(</span><span class="s1">&#39;This is my subject&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::message">
-<tt class="descname">message</tt><big>(</big><em>$body</em><big>)</big><a class="headerlink" href="#CI_Email::message" title="Permalink to this definition">¶</a></dt>
+<code class="descname">message</code><span class="sig-paren">(</span><em>$body</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::message" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -861,14 +861,14 @@ the emails to batches, with each batch not exceeding the specified
 </tbody>
 </table>
 <p>Sets the e-mail message body:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">message</span><span class="p">(</span><span class="s1">&#39;This is my message&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">message</span><span class="p">(</span><span class="s1">&#39;This is my message&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::set_alt_message">
-<tt class="descname">set_alt_message</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#CI_Email::set_alt_message" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_alt_message</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::set_alt_message" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -887,7 +887,7 @@ the emails to batches, with each batch not exceeding the specified
 </tbody>
 </table>
 <p>Sets the alternative e-mail message body:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">set_alt_message</span><span class="p">(</span><span class="s1">&#39;This is the alternative message&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">set_alt_message</span><span class="p">(</span><span class="s1">&#39;This is the alternative message&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>This is an optional message string which can be used if you send
@@ -900,7 +900,7 @@ and strip the tags.</p>
 
 <dl class="method">
 <dt id="CI_Email::set_header">
-<tt class="descname">set_header</tt><big>(</big><em>$header</em>, <em>$value</em><big>)</big><a class="headerlink" href="#CI_Email::set_header" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_header</code><span class="sig-paren">(</span><em>$header</em>, <em>$value</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::set_header" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -920,7 +920,7 @@ and strip the tags.</p>
 </tbody>
 </table>
 <p>Appends additional headers to the e-mail:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;Header1&#39;</span><span class="p">,</span> <span class="s1">&#39;Value1&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;Header1&#39;</span><span class="p">,</span> <span class="s1">&#39;Value1&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">set_header</span><span class="p">(</span><span class="s1">&#39;Header2&#39;</span><span class="p">,</span> <span class="s1">&#39;Value2&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -928,7 +928,7 @@ and strip the tags.</p>
 
 <dl class="method">
 <dt id="CI_Email::clear">
-<tt class="descname">clear</tt><big>(</big><span class="optional">[</span><em>$clear_attachments = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::clear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="optional">[</span><em>$clear_attachments = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::clear" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -949,7 +949,7 @@ and strip the tags.</p>
 <p>Initializes all the email variables to an empty state. This method
 is intended for use if you run the email sending method in a loop,
 permitting the data to be reset between cycles.</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">foreach</span> <span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$name</span> <span class="o">=&gt;</span> <span class="nv">$address</span><span class="p">)</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">foreach</span> <span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$name</span> <span class="o">=&gt;</span> <span class="nv">$address</span><span class="p">)</span>
 <span class="p">{</span>
         <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">clear</span><span class="p">();</span>
 
@@ -963,14 +963,14 @@ permitting the data to be reset between cycles.</p>
 </div>
 <p>If you set the parameter to TRUE any attachments will be cleared as
 well:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">clear</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">clear</span><span class="p">(</span><span class="k">TRUE</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::send">
-<tt class="descname">send</tt><big>(</big><span class="optional">[</span><em>$auto_clear = TRUE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::send" title="Permalink to this definition">¶</a></dt>
+<code class="descname">send</code><span class="sig-paren">(</span><span class="optional">[</span><em>$auto_clear = TRUE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::send" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -990,7 +990,7 @@ well:</p>
 </table>
 <p>The e-mail sending method. Returns boolean TRUE or FALSE based on
 success or failure, enabling it to be used conditionally:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">())</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">())</span>
 <span class="p">{</span>
         <span class="c1">// Generate error</span>
 <span class="p">}</span>
@@ -998,7 +998,7 @@ success or failure, enabling it to be used conditionally:</p>
 </div>
 <p>This method will automatically clear all parameters if the request was
 successful. To stop this behaviour pass FALSE:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">(</span><span class="k">FALSE</span><span class="p">))</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">(</span><span class="k">FALSE</span><span class="p">))</span>
 <span class="p">{</span>
         <span class="c1">// Parameters won&#39;t be cleared</span>
 <span class="p">}</span>
@@ -1006,14 +1006,14 @@ successful. To stop this behaviour pass FALSE:</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">In order to use the <tt class="docutils literal"><span class="pre">print_debugger()</span></tt> method, you need
+<p class="last">In order to use the <code class="docutils literal"><span class="pre">print_debugger()</span></code> method, you need
 to avoid clearing the email parameters.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::attach">
-<tt class="descname">attach</tt><big>(</big><em>$filename</em><span class="optional">[</span>, <em>$disposition = ''</em><span class="optional">[</span>, <em>$newname = NULL</em><span class="optional">[</span>, <em>$mime = ''</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::attach" title="Permalink to this definition">¶</a></dt>
+<code class="descname">attach</code><span class="sig-paren">(</span><em>$filename</em><span class="optional">[</span>, <em>$disposition = ''</em><span class="optional">[</span>, <em>$newname = NULL</em><span class="optional">[</span>, <em>$mime = ''</em><span class="optional">]</span><span class="optional">]</span><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::attach" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1039,35 +1039,35 @@ specification used here. <a class="reference external" href="https://www.iana.or
 <p>Enables you to send an attachment. Put the file path/name in the first
 parameter. For multiple attachments use the method multiple times.
 For example:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;/path/to/photo1.jpg&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;/path/to/photo1.jpg&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;/path/to/photo2.jpg&#39;</span><span class="p">);</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;/path/to/photo3.jpg&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>To use the default disposition (attachment), leave the second parameter blank,
 otherwise use a custom disposition:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;image.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;image.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can also use a URL:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;http://example.com/filename.pdf&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;http://example.com/filename.pdf&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>If you&#8217;d like to use a custom file name, you can use the third paramater:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;filename.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;attachment&#39;</span><span class="p">,</span> <span class="s1">&#39;report.pdf&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="s1">&#39;filename.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;attachment&#39;</span><span class="p">,</span> <span class="s1">&#39;report.pdf&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>If you need to use a buffer string instead of a real - physical - file you can
 use the first parameter as buffer, the third parameter as file name and the fourth
 parameter as mime-type:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="nv">$buffer</span><span class="p">,</span> <span class="s1">&#39;attachment&#39;</span><span class="p">,</span> <span class="s1">&#39;report.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;application/pdf&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="nv">$buffer</span><span class="p">,</span> <span class="s1">&#39;attachment&#39;</span><span class="p">,</span> <span class="s1">&#39;report.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;application/pdf&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="CI_Email::attachment_cid">
-<tt class="descname">attachment_cid</tt><big>(</big><em>$filename</em><big>)</big><a class="headerlink" href="#CI_Email::attachment_cid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">attachment_cid</code><span class="sig-paren">(</span><em>$filename</em><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::attachment_cid" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1087,7 +1087,7 @@ parameter as mime-type:</p>
 </table>
 <p>Sets and returns an attachment&#8217;s Content-ID, which enables your to embed an inline
 (picture) attachment into HTML. First parameter must be the already attached file name.</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$filename</span> <span class="o">=</span> <span class="s1">&#39;/img/photo1.jpg&#39;</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$filename</span> <span class="o">=</span> <span class="s1">&#39;/img/photo1.jpg&#39;</span><span class="p">;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">attach</span><span class="p">(</span><span class="nv">$filename</span><span class="p">);</span>
 <span class="k">foreach</span> <span class="p">(</span><span class="nv">$list</span> <span class="k">as</span> <span class="nv">$address</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1106,7 +1106,7 @@ parameter as mime-type:</p>
 
 <dl class="method">
 <dt id="CI_Email::print_debugger">
-<tt class="descname">print_debugger</tt><big>(</big><span class="optional">[</span><em>$include = array('headers'</em>, <em>'subject'</em>, <em>'body')</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#CI_Email::print_debugger" title="Permalink to this definition">¶</a></dt>
+<code class="descname">print_debugger</code><span class="sig-paren">(</span><span class="optional">[</span><em>$include = array('headers'</em>, <em>'subject'</em>, <em>'body')</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#CI_Email::print_debugger" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1129,7 +1129,7 @@ the email messsage. Useful for debugging.</p>
 <p>You can optionally specify which parts of the message should be printed.
 Valid options are: <strong>headers</strong>, <strong>subject</strong>, <strong>body</strong>.</p>
 <p>Example:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="c1">// You need to pass FALSE while sending in order for the email data</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="c1">// You need to pass FALSE while sending in order for the email data</span>
 <span class="c1">// to not be cleared - if that happens, print_debugger() would have</span>
 <span class="c1">// nothing to output.</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">email</span><span class="o">-&gt;</span><span class="na">send</span><span class="p">(</span><span class="k">FALSE</span><span class="p">);</span>
@@ -1168,7 +1168,7 @@ Valid options are: <strong>headers</strong>, <strong>subject</strong>, <strong>b
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jul 26, 2016.
+      Last updated on Oct 24, 2016.
     </p>
   </div>
 
@@ -1189,7 +1189,7 @@ Valid options are: <strong>headers</strong>, <strong>subject</strong>, <strong>b
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

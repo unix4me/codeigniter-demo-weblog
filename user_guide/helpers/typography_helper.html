@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Typography Helper &mdash; CodeIgniter 3.1.0 documentation</title>
+  <title>Typography Helper &mdash; CodeIgniter 3.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="../index.html"/>
         <link rel="up" title="Helpers" href="index.html"/>
         <link rel="next" title="URL Helper" href="url_helper.html"/>
         <link rel="prev" title="Text Helper" href="text_helper.html"/> 
@@ -436,7 +436,7 @@ in semantically relevant ways.</p>
 <div class="custom-index container"></div><div class="section" id="loading-this-helper">
 <h2><a class="toc-backref" href="#id1">Loading this Helper</a><a class="headerlink" href="#loading-this-helper" title="Permalink to this headline">¶</a></h2>
 <p>This helper is loaded using the following code:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">load</span><span class="o">-&gt;</span><span class="na">helper</span><span class="p">(</span><span class="s1">&#39;typography&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -445,7 +445,7 @@ in semantically relevant ways.</p>
 <p>The following functions are available:</p>
 <dl class="function">
 <dt id="auto_typography">
-<tt class="descname">auto_typography</tt><big>(</big><em>$str</em><span class="optional">[</span>, <em>$reduce_linebreaks = FALSE</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#auto_typography" title="Permalink to this definition">¶</a></dt>
+<code class="descname">auto_typography</code><span class="sig-paren">(</span><em>$str</em><span class="optional">[</span>, <em>$reduce_linebreaks = FALSE</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#auto_typography" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -466,10 +466,10 @@ in semantically relevant ways.</p>
 </table>
 <p>Formats text so that it is semantically and typographically correct
 HTML.</p>
-<p>This function is an alias for <tt class="docutils literal"><span class="pre">CI_Typography::auto_typography()</span></tt>.
+<p>This function is an alias for <code class="docutils literal"><span class="pre">CI_Typography::auto_typography()</span></code>.
 For more info, please see the <a class="reference internal" href="../libraries/typography.html"><em>Typography Library</em></a> documentation.</p>
 <p>Usage example:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nx">auto_typography</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nx">auto_typography</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -483,7 +483,7 @@ pages.</p>
 
 <dl class="function">
 <dt id="nl2br_except_pre">
-<tt class="descname">nl2br_except_pre</tt><big>(</big><em>$str</em><big>)</big><a class="headerlink" href="#nl2br_except_pre" title="Permalink to this definition">¶</a></dt>
+<code class="descname">nl2br_except_pre</code><span class="sig-paren">(</span><em>$str</em><span class="sig-paren">)</span><a class="headerlink" href="#nl2br_except_pre" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -502,17 +502,17 @@ pages.</p>
 </tbody>
 </table>
 <p>Converts newlines to &lt;br /&gt; tags unless they appear within &lt;pre&gt; tags.
-This function is identical to the native PHP <tt class="docutils literal"><span class="pre">nl2br()</span></tt> function,
+This function is identical to the native PHP <code class="docutils literal"><span class="pre">nl2br()</span></code> function,
 except that it ignores &lt;pre&gt; tags.</p>
 <p>Usage example:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$string</span> <span class="o">=</span> <span class="nx">nl2br_except_pre</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$string</span> <span class="o">=</span> <span class="nx">nl2br_except_pre</span><span class="p">(</span><span class="nv">$string</span><span class="p">);</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="function">
 <dt id="entity_decode">
-<tt class="descname">entity_decode</tt><big>(</big><em>$str</em>, <em>$charset = NULL</em><big>)</big><a class="headerlink" href="#entity_decode" title="Permalink to this definition">¶</a></dt>
+<code class="descname">entity_decode</code><span class="sig-paren">(</span><em>$str</em>, <em>$charset = NULL</em><span class="sig-paren">)</span><a class="headerlink" href="#entity_decode" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -531,7 +531,7 @@ except that it ignores &lt;pre&gt; tags.</p>
 </tr>
 </tbody>
 </table>
-<p>This function is an alias for <tt class="docutils literal"><span class="pre">CI_Security::entity_decode()</span></tt>.
+<p>This function is an alias for <code class="docutils literal"><span class="pre">CI_Security::entity_decode()</span></code>.
 Fore more info, please see the <a class="reference internal" href="../libraries/security.html"><em>Security Library</em></a> documentation.</p>
 </dd></dl>
 
@@ -557,7 +557,7 @@ Fore more info, please see the <a class="reference internal" href="../libraries/
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jul 26, 2016.
+      Last updated on Oct 24, 2016.
     </p>
   </div>
 
@@ -578,7 +578,7 @@ Fore more info, please see the <a class="reference internal" href="../libraries/
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false

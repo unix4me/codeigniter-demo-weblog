@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Hooks - Extending the Framework Core &mdash; CodeIgniter 3.1.0 documentation</title>
+  <title>Hooks - Extending the Framework Core &mdash; CodeIgniter 3.1.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="../index.html"/>
         <link rel="up" title="General Topics" href="index.html"/>
         <link rel="next" title="Auto-loading Resources" href="autoloader.html"/>
         <link rel="prev" title="Creating Ancillary Classes" href="ancillary_classes.html"/> 
@@ -438,7 +438,7 @@ other location.</p>
 <h2>Enabling Hooks<a class="headerlink" href="#enabling-hooks" title="Permalink to this headline">¶</a></h2>
 <p>The hooks feature can be globally enabled/disabled by setting the
 following item in the <strong>application/config/config.php</strong> file:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;enable_hooks&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;enable_hooks&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -446,7 +446,7 @@ following item in the <strong>application/config/config.php</strong> file:</p>
 <h2>Defining a Hook<a class="headerlink" href="#defining-a-hook" title="Permalink to this headline">¶</a></h2>
 <p>Hooks are defined in the <strong>application/config/hooks.php</strong> file.
 Each hook is specified as an array with this prototype:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;pre_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;pre_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;class&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;MyClass&#39;</span><span class="p">,</span>
         <span class="s1">&#39;function&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Myfunction&#39;</span><span class="p">,</span>
         <span class="s1">&#39;filename&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Myclass.php&#39;</span><span class="p">,</span>
@@ -476,9 +476,9 @@ filepath. No trailing slash.</li>
 <li><strong>params</strong> Any parameters you wish to pass to your script. This item
 is optional.</li>
 </ul>
-<p>If you&#8217;re running PHP 5.3+, you can also use lambda/anoymous functions
-(or closures) as hooks, with a simpler syntax:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;post_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
+<p>You can also use lambda/anoymous functions (or closures) as hooks, with
+a simpler syntax:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;post_controller&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">function</span><span class="p">()</span>
 <span class="p">{</span>
         <span class="cm">/* do something here */</span>
 <span class="p">};</span>
@@ -489,7 +489,7 @@ is optional.</li>
 <h2>Multiple Calls to the Same Hook<a class="headerlink" href="#multiple-calls-to-the-same-hook" title="Permalink to this headline">¶</a></h2>
 <p>If want to use the same hook point with more than one script, simply
 make your array declaration multi-dimensional, like this:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;pre_controller&#39;</span><span class="p">][]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;pre_controller&#39;</span><span class="p">][]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
         <span class="s1">&#39;class&#39;</span>    <span class="o">=&gt;</span> <span class="s1">&#39;MyClass&#39;</span><span class="p">,</span>
         <span class="s1">&#39;function&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;MyMethod&#39;</span><span class="p">,</span>
         <span class="s1">&#39;filename&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Myclass.php&#39;</span><span class="p">,</span>
@@ -507,7 +507,7 @@ make your array declaration multi-dimensional, like this:</p>
 </pre></div>
 </div>
 <p>Notice the brackets after each array index:</p>
-<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;pre_controller&#39;</span><span class="p">][]</span>
+<div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$hook</span><span class="p">[</span><span class="s1">&#39;pre_controller&#39;</span><span class="p">][]</span>
 </pre></div>
 </div>
 <p>This permits you to have the same hook point with multiple scripts. The
@@ -530,14 +530,14 @@ to any method calls happening.</li>
 <li><strong>post_controller</strong>
 Called immediately after your controller is fully executed.</li>
 <li><strong>display_override</strong>
-Overrides the <tt class="docutils literal"><span class="pre">_display()</span></tt> method, used to send the finalized page
+Overrides the <code class="docutils literal"><span class="pre">_display()</span></code> method, used to send the finalized page
 to the web browser at the end of system execution. This permits you
 to use your own display methodology. Note that you will need to
-reference the CI superobject with <tt class="docutils literal"><span class="pre">$this-&gt;CI</span> <span class="pre">=&amp;</span> <span class="pre">get_instance()</span></tt> and
+reference the CI superobject with <code class="docutils literal"><span class="pre">$this-&gt;CI</span> <span class="pre">=&amp;</span> <span class="pre">get_instance()</span></code> and
 then the finalized data will be available by calling
-<tt class="docutils literal"><span class="pre">$this-&gt;CI-&gt;output-&gt;get_output()</span></tt>.</li>
+<code class="docutils literal"><span class="pre">$this-&gt;CI-&gt;output-&gt;get_output()</span></code>.</li>
 <li><strong>cache_override</strong>
-Enables you to call your own method instead of the <tt class="docutils literal"><span class="pre">_display_cache()</span></tt>
+Enables you to call your own method instead of the <code class="docutils literal"><span class="pre">_display_cache()</span></code>
 method in the <a class="reference internal" href="../libraries/output.html"><em>Output Library</em></a>. This permits
 you to use your own cache display mechanism.</li>
 <li><strong>post_system</strong>
@@ -567,7 +567,7 @@ browser.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Jul 26, 2016.
+      Last updated on Oct 24, 2016.
     </p>
   </div>
 
@@ -588,7 +588,7 @@ browser.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.0',
+            VERSION:'3.1.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
