@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Change Log &mdash; CodeIgniter 3.1.1 documentation</title>
+  <title>Change Log &mdash; CodeIgniter 3.1.2 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="CodeIgniter 3.1.1 documentation" href="index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.2 documentation" href="index.html"/>
         <link rel="next" title="The MIT License (MIT)" href="license.html"/>
         <link rel="prev" title="Developer’s Certificate of Origin 1.1" href="DCO.html"/> 
 
@@ -422,6 +422,29 @@
             
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-3-1-2">
+<h2>Version 3.1.2<a class="headerlink" href="#version-3-1-2" title="Permalink to this headline">¶</a></h2>
+<p>Release Date: Oct 28, 2016</p>
+<ul class="simple">
+<li><strong>Security</strong><ul>
+<li>Fixed a number of new vulnerabilities in <a class="reference internal" href="libraries/security.html"><em>Security Library</em></a> method <code class="docutils literal"><span class="pre">xss_clean()</span></code>.</li>
+</ul>
+</li>
+<li>General Changes<ul>
+<li>Allowed PHP 4-style constructors (<code class="docutils literal"><span class="pre">Mathching_name::Matching_name()</span></code> methods) to be used as routes, if there&#8217;s a <code class="docutils literal"><span class="pre">__construct()</span></code> to override them.</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="bug-fixes-for-3-1-2">
+<h3>Bug fixes for 3.1.2<a class="headerlink" href="#bug-fixes-for-3-1-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Fixed a regression (#4874) - <a class="reference internal" href="libraries/sessions.html"><em>Session Library</em></a> didn&#8217;t take into account <code class="docutils literal"><span class="pre">session.hash_bits_per_character</span></code> when validating session IDs.</li>
+<li>Fixed a bug (#4871) - <a class="reference internal" href="database/query_builder.html"><em>Query Builder</em></a> method <code class="docutils literal"><span class="pre">update_batch()</span></code> didn&#8217;t properly handle identifier escaping.</li>
+<li>Fixed a bug (#4884) - <a class="reference internal" href="database/query_builder.html"><em>Query Builder</em></a> didn&#8217;t properly parse field names ending in &#8216;is&#8217; when used inside WHERE and HAVING statements.</li>
+<li>Fixed a bug where <code class="docutils literal"><span class="pre">CI_Log</span></code>, <code class="docutils literal"><span class="pre">CI_Output</span></code>, <code class="docutils literal"><span class="pre">CI_Email</span></code> and <code class="docutils literal"><span class="pre">CI_Zip</span></code> didn&#8217;t handle strings in a byte-safe manner when <code class="docutils literal"><span class="pre">mbstring.func_override</span></code> is enabled.</li>
+</ul>
+</div>
+</div>
 <div class="section" id="version-3-1-1">
 <h2>Version 3.1.1<a class="headerlink" href="#version-3-1-1" title="Permalink to this headline">¶</a></h2>
 <p>Release Date: Oct 22, 2016</p>
@@ -3910,7 +3933,7 @@ and fixed various typos.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2014 - 2016, British Columbia Institute of Technology.
-      Last updated on Oct 24, 2016.
+      Last updated on Oct 28, 2016.
     </p>
   </div>
 
@@ -3931,7 +3954,7 @@ and fixed various typos.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'3.1.1',
+            VERSION:'3.1.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
