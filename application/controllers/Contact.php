@@ -10,8 +10,8 @@ class Contact extends MY_Controller {
     {
         parent::__construct();
         $this->load->helper(array('url', 'form', 'captcha'));
-        $this->load->library(array('email', 'form_validation', 'session'));
-        //$this->load->driver('session');
+        $this->load->library(array('email', 'form_validation'));
+        $this->load->driver('session');
     }
 
     // ------------------------------------------------------------------------------   
@@ -84,6 +84,6 @@ class Contact extends MY_Controller {
 }
 
 /* End of file Contact.php */
-    /* Location: ./application/controllers/Contact.php */
+/* Location: ./application/controllers/Contact.php */
 
     
