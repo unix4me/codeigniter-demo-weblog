@@ -10,8 +10,8 @@ class Contact extends MY_Controller {
     {
         parent::__construct();
         $this->load->helper(array('url', 'form', 'captcha'));
-        $this->load->library(array('email', 'form_validation'));
-        $this->load->driver('session');
+        $this->load->library(array('email', 'form_validation', 'session'));
+        //$this->load->driver('session');
     }
 
     // ------------------------------------------------------------------------------   
@@ -21,7 +21,7 @@ class Contact extends MY_Controller {
         $this->form_validation->set_rules('name', 'Name', 'required|trim|max_length[128]');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|max_length[128]');
         $this->form_validation->set_rules('message', 'Message', 'required|trim|max_length[255]');
-        $this->form_validation->set_rules('newCaptcha', 'Captcha', 'required|callback_check_captcha');
+        $this->form_validation->set_rules('newCaptcha', 'Captcha', 'callback_check_captcha|required');
 
         if ($this->form_validation->run() == FALSE)
         {
@@ -69,6 +69,10 @@ class Contact extends MY_Controller {
         {
             return TRUE;
         }
+        elseif (empty($str))
+        {
+            // ...
+        }
         else
         {
             $this->form_validation->set_message('check_captcha', 'Wrong captcha!');
@@ -80,5 +84,6 @@ class Contact extends MY_Controller {
 }
 
 /* End of file Contact.php */
-/* Location: ./application/controllers/Contact.php */
+    /* Location: ./application/controllers/Contact.php */
 
+    
