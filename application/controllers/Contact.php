@@ -34,7 +34,6 @@ class Contact extends MY_Controller {
             $this->data['captcha'] = create_captcha($vals);
 
             $this->session->set_userdata('captchaWord', $this->data['captcha']['word']);
-
             $this->data['title'] = "Contact";
             $this->data['pagebody'] = 'contact/contact_form';
             $this->render();

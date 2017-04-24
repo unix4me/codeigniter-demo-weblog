@@ -18,7 +18,6 @@ class Pages extends MY_Controller {
         {
             show_404();
         }
-
         $this->data['title'] = ucfirst($page);
         $this->data['pagebody'] = 'pages/' . $page;
         $this->render();

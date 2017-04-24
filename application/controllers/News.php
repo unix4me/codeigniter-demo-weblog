@@ -53,7 +53,7 @@ class News extends MY_Controller {
         $this->data['pagebody'] = 'news/view';
         $this->render();
     }
-
+    
     // ------------------------------------------------------------------------------
 
     public function create()

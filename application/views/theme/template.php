@@ -9,7 +9,7 @@
         <meta name="keywords" content="">
         <meta name="author" content="">
         <meta name="robots" content="index, follow">
-        
+
         <link rel="icon" href="../../favicon.ico">
         {header_view}
     </head>
