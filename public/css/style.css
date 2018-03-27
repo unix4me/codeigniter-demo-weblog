@@ -164,8 +164,19 @@ h6, .h6 {
     border-top: 1px solid #e5e5e5;
 }
 
+/* unvisited link */
 .blog-footer a {
-    color: #555;
+    color: red;
+}
+
+/* visited link */
+.blog-footer a:visited {
+    color: green;
+}
+
+/* mouse over link */
+.blog-footer a:hover {
+    color: white;
 }
 
 .blog-footer p:last-child {
