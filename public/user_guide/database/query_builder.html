@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Query Builder Class &mdash; CodeIgniter 3.1.9 documentation</title>
+  <title>Query Builder Class &mdash; CodeIgniter 3.1.10 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="CodeIgniter 3.1.9 documentation" href="../index.html"/>
+    <link rel="top" title="CodeIgniter 3.1.10 documentation" href="../index.html"/>
         <link rel="up" title="Database Reference" href="index.html"/>
         <link rel="next" title="Transactions" href="transactions.html"/>
         <link rel="prev" title="Query Helper Methods" href="helpers.html"/> 
@@ -751,10 +751,11 @@ AND between them:</p>
 </pre></div>
 </div>
 <p>If you want to control where the wildcard (%) is placed, you can use
-an optional third argument. Your options are ‘before’, ‘after’ and
+an optional third argument. Your options are ‘before’, ‘after’, ‘none’ and
 ‘both’ (which is the default).</p>
 <div class="highlight-ci"><div class="highlight"><pre><span></span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;before&#39;</span><span class="p">);</span>    <span class="c1">// Produces: WHERE `title` LIKE &#39;%match&#39; ESCAPE &#39;!&#39;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;after&#39;</span><span class="p">);</span>     <span class="c1">// Produces: WHERE `title` LIKE &#39;match%&#39; ESCAPE &#39;!&#39;</span>
+<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;none&#39;</span><span class="p">);</span>      <span class="c1">// Produces: WHERE `title` LIKE &#39;match&#39; ESCAPE &#39;!&#39;</span>
 <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">db</span><span class="o">-&gt;</span><span class="na">like</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;match&#39;</span><span class="p">,</span> <span class="s1">&#39;both&#39;</span><span class="p">);</span>      <span class="c1">// Produces: WHERE `title` LIKE &#39;%match%&#39; ESCAPE &#39;!&#39;</span>
 </pre></div>
 </div>
@@ -2662,8 +2663,8 @@ a DELETE statement will be used instead.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2018, British Columbia Institute of Technology.
-      Last updated on Jun 12, 2018.
+        &copy; Copyright 2014 - 2019, British Columbia Institute of Technology.
+      Last updated on Jan 16, 2019.
     </p>
   </div>
 
@@ -2684,7 +2685,7 @@ a DELETE statement will be used instead.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'3.1.9',
+            VERSION:'3.1.10',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  false
